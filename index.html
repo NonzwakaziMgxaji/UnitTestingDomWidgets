@@ -3,58 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factory functions unit tests</title>
-    <style>
-        body {
-            background-color: #CDB7A9;
-            margin: 0 20%;
-        }
+    <title>Document</title>
 
-        h1{
-            color: #522632;
-            padding: 10px;
-            text-align: center;
-        }
-
-        h5{
-            color: #522632;
-            text-align: center;
-        }
-
-        h3{
-            padding: 25px;
-            border: 5px solid #513F42;
-            text-align: center;
-            color: black;
-        }
-
-        h3:hover {
-            background-color: #513F42;
-        }
-
-        a{
-            text-decoration: none;
-        }
-
-        @media only screen and (max-width: 425px){
-            body{
-                margin: 0 10px;
-            }
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
 </head>
 <body>
-    <h1>UNIT TESTING DOM WIDGETS</h1>
+    <div id="mocha"></div>
+    <script>
+        // Behaviour Driven Development mocha test style
+        mocha.setup("bdd");
+        //assert function
+        var assert = chai.assert;
+    </script>
 
-    <h5>by Nonzwakazi Mgxaji</h5>
+<script src="./calculatebill.js" charset = "utf-8"></script>
+<script src="./calculatebillTest.js" charset = "utf-8"></script>
 
-    <a href="./calculateindex.html"><h3>CALCULATE BILL</h3></a>
-    <a href="./textindex.html"><h3>TEXT INPUT BILL</h3></a>
-    <a href="./radioindex.html"><h3>RADIO BUTTON BILL</h3></a>
-    <a href="./billindex.html"><h3>BILL WITH SETTINGS</h3></a>
-    <a href="./fruitindex.html"><h3>FRUIT EATER</h3></a>
+<script src="./textInputBill.js" charset = "utf-8"></script>
+<script src="./textInputBill-test.js" charset = "utf-8"></script>
+
+<script src="./radiobuttonbill.js" charset = "utf-8"></script>
+<script src="./radiobuttonbill-tests.js" charset = "utf-8"></script>
+
+<script src="./billwithsettings.js" charset = "utf-8"></script>
+<script src="./billwithsettings-test.js" charset = "utf-8"></script>
+
+<script src="./fruitEater.js" charset = "utf-8"></script>
+<script src="./fruitEaterTest.js" charset = "utf-8"></script>
+
+<script>
+    // configure and run mocha
+    mocha.checkLeaks();
+    mocha.run();
+</script>
     
 </body>
 </html>
